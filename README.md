@@ -14,9 +14,9 @@ Chirita Maria-Luissa 332CA
   corespunzatoare buffer-ului in care scrie sau din care se citeste.
 
   Pentru metoda putMessageHeadQuarterChannel, nu pun pe canal toate mesajele
-  primite:
-    - mesajele END sunt ignorate.
-    - daca primesc EXIT, adaug mesajul pe canal.
+  primite: <br />
+    - mesajele END sunt ignorate <br />
+    - daca primesc EXIT, adaug mesajul pe canal <br />
     - pentru ca un mesaj complet si valid despre un nod adiacent, primit de
      un Space Explorer trebuie sa contina: parinte, nod si hash-ul nodului,
      acesta trebuie compus in CommunicationChannel din 2 mesaje	consecutive
@@ -27,7 +27,7 @@ Chirita Maria-Luissa 332CA
      acesta (atunci cand map nu contine threadId). La primirea celui de-al
      doilea mesaj pentru acelasi thread (map contine threadId) extrag
      parintele si creez mesajul cu el si campurile currentSolarSystem si
-     data, luate din mesajul primit. 
+     data, luate din mesajul primit <br />
 
 # Space Explorer
   Thread-ul Space Explorer primeste mesaje pe canal intr-o bucla infinita.
