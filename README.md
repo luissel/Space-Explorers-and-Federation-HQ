@@ -27,7 +27,7 @@ Chirita Maria-Luissa 332CA
      acesta (atunci cand map nu contine threadId). La primirea celui de-al
      doilea mesaj pentru acelasi thread (map contine threadId) extrag
      parintele si creez mesajul cu el si campurile currentSolarSystem si
-     data, luate din mesajul primit.
+     data, luate din mesajul primit. 
 
 # Space Explorer
   Thread-ul Space Explorer primeste mesaje pe canal intr-o bucla infinita.
