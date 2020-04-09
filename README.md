@@ -15,19 +15,19 @@ Chirita Maria-Luissa 332CA
 
   Pentru metoda putMessageHeadQuarterChannel, nu pun pe canal toate mesajele
   primite:
-	    - mesajele END sunt ignorate
-	    - daca primesc EXIT, adaug mesajul pe canal.
-	    - pentru ca un mesaj complet si valid despre un nod adiacent, primit de
-	     un Space Explorer trebuie sa contina: parinte, nod si hash-ul nodului,
-	     acesta trebuie compus in CommunicationChannel din 2 mesaje	consecutive
-	     primite: mesajul cu informatii despre nodul parinte si mesajul cu
-	     informatiile despre nodul adiacent. Pentru a mentine cele 2 mesaje in
-	     ordine, folosesc map-ul parents in care cheia este id-ul thread-ului
-	     si retin parintele atunci cand ajunge un mesaj cu informatii despre
-	     acesta (atunci cand map nu contine threadId). La primirea celui de-al
-	     doilea mesaj pentru acelasi thread (map contine threadId) extrag
-	     parintele si creez mesajul cu el si campurile currentSolarSystem si
-	     data, luate din mesajul primit.
+    - mesajele END sunt ignorate
+    - daca primesc EXIT, adaug mesajul pe canal.
+    - pentru ca un mesaj complet si valid despre un nod adiacent, primit de
+     un Space Explorer trebuie sa contina: parinte, nod si hash-ul nodului,
+     acesta trebuie compus in CommunicationChannel din 2 mesaje	consecutive
+     primite: mesajul cu informatii despre nodul parinte si mesajul cu
+     informatiile despre nodul adiacent. Pentru a mentine cele 2 mesaje in
+     ordine, folosesc map-ul parents in care cheia este id-ul thread-ului
+     si retin parintele atunci cand ajunge un mesaj cu informatii despre
+     acesta (atunci cand map nu contine threadId). La primirea celui de-al
+     doilea mesaj pentru acelasi thread (map contine threadId) extrag
+     parintele si creez mesajul cu el si campurile currentSolarSystem si
+     data, luate din mesajul primit.
 
 # Space Explorer
   Thread-ul Space Explorer primeste mesaje pe canal intr-o bucla infinita.
