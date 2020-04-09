@@ -30,11 +30,16 @@ Chirita Maria-Luissa 332CA
      data, luate din mesajul primit <br />
 
 # Space Explorer
-  Thread-ul Space Explorer primeste mesaje pe canal intr-o bucla infinita.
-  Daca mesajul este de tip EXIT, SpaceExplorer isi termina executia. In caz
-  contrar, se trimie, pe canalul SpaceExplorer, un nou mesaj avand campurile
-  parentSolarSystem si currentSolarSystem, de la mesajul initial si campul
-  data pe care am aplicat functia encryptMultipleTimes.
-  Se construieste mesajul nou avand campurile parentSolarSystem si
-  currentSolarSystem, de la mesajul initial si campul data criptat prin
-  aplicarea encryptMultipleTimes, dupa care este trimis pe canal.
+  Thread-ul Space Explorer primeste mesaje pe canal intr-o bucla infinita. Daca mesajul este de tip EXIT, SpaceExplorer isi termina executia. In caz contrar, se trimie, pe canalul SpaceExplorer, un nou mesaj avand campurile parentSolarSystem si currentSolarSystem, de la mesajul initial si campul data pe care am aplicat functia encryptMultipleTimes.
+  Se construieste mesajul nou avand campurile parentSolarSystem si currentSolarSystem, de la mesajul initial si campul data criptat prin
+aplicarea encryptMultipleTimes, dupa care este trimis pe canal.
+
+# HQ
+  Trimite vecinii unui nod deja vizitat si verifica frecventele primite de la exploratori. Cand toata galaxia e explorata, trimite un mesaj "EXIT" pentru fiecare explorator pentru a sti sa se opreasca.
+
+# Message
+Este mesajul trimis de catre un explorator la HQ sau invers.  <br />
+HQ-urile trimit 2 mesaje pentru fiecare muchie pe modelul: <br />
+1: parinte  <br />
+2: copil frecventa  <br />
+Canalul de comunicatie se ocupa de concatenarea acestora pentru a forma mesajul complet, valid si il trimite.
